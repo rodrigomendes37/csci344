@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>HW02 Starter Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class = "top-nav">
+        <h1 class="logo">
+            PhotoApp
+        </h1>
+        <nav class = "nav-right">
+            <span class = "nav-username">rodrigo</span>
+            <a class = "logout" href="#">Log out</a>
+        </nav> 
+    </header>
+
+    <!-- Right side panel -->
+    <aside class="suggestions-panel">
+        <div class = "current-user">
+            <img class = "avatar" src = "https://i.pravatar.cc/100?img=15" alt = "Profile picture of Rodrigo">
+            <div>
+                <div class = "username">rodrigo</div>
+                <div class = "muted">@rodrigo</div>
+            </div>
+        </div>
+
+        <section class = "suggestions-title">Suggestions for you</section>
+
+        <div class = "suggestions">
+            <div class = "suggestion">
+                <img class = "avatar" src = "https://i.pravatar.cc/100?img=24" alt = "Porfile picture of Emma">
+                <div class = "suggestion-text">
+                    <div class = "username">emma</div>
+                    <div class = "muted">suggested for you</div>
+                </div>
+                <a class = "follow" href = "#">Follow</a>
+            </div>
+
+            <div class = "suggestion">
+                <img class = "avatar" src = "https://i.pravatar.cc/100?img=29" alt = "Porfile picture of Noah">
+                <div class = "suggestion-text">
+                    <div class = "username">Noah</div>
+                    <div class = "muted">suggested for you</div>
+                </div>
+                <a class = "follow" href = "#">Follow</a>
+            </div>
+
+            <div class = "suggestion">
+                <img class = "avatar" src = "https://i.pravatar.cc/100?img=41" alt = "Porfile picture of Zoe">
+                <div class = "suggestion-text">
+                    <div class = "username">zoe</div>
+                    <div class = "muted">suggested for you</div>
+                </div>
+                <a class = "follow" href = "#">Follow</a>
+            </div>
+
+            <div class = "suggestion">
+                <img class = "avatar" src = "https://i.pravatar.cc/100?img=53" alt = "Porfile picture of Diego">
+                <div class = "suggestion-text">
+                    <div class = "username">diego</div>
+                    <div class = "muted">suggested for you</div>
+                </div>
+                <a class = "follow" href = "#">Follow</a>
+            </div>
+
+            <div class = "suggestion">
+                <img class = "avatar" src = "https://i.pravatar.cc/100?img=62" alt = "Porfile picture of Joao">
+                <div class = "suggestion-text">
+                    <div class = "username">joao</div>
+                    <div class = "muted">suggested for you</div>
+                </div>
+                <a class = "follow" href = "#">Follow</a>
+            </div>
+        </div>
+    </aside>
+
+
+    <main>
+
+        <section class="news-feed">
+            <!-- Story Section -->
+            <header class = "stories">
+                <div class = "story">
+                    <img class = "avatar story-avatar" src = "https://i.pravatar.cc/100?img=12" alt = "Profile picture of Alex">
+                    <div class = "story-name">alex</div>
+                </div>
+                <div class = "story">
+                    <img class = "avatar story-avatar" src = "https://i.pravatar.cc/100?img=32" alt = "Profile picture of Maya">
+                    <div class = "story-name">maya</div>
+                </div>
+                <div class = "story">
+                    <img class = "avatar story-avatar" src = "https://i.pravatar.cc/100?img=8" alt = "Profile picture of Jordan">
+                    <div class = "story-name">jordan</div>
+                </div>
+                <div class = "story">
+                    <img class = "avatar story-avatar" src = "https://i.pravatar.cc/100?img=47" alt = "Profile picture of Sofia">
+                    <div class = "story-name">sofia</div>
+                </div>
+                <div class = "story">
+                    <img class = "avatar story-avatar" src = "https://i.pravatar.cc/100?img=58" alt = "Profile picture of Ben">
+                    <div class = "story-name">ben</div>
+                </div>
+            </header>
+
+            <!-- Posts -->
+            <section class="post">
+                <div class = "card-header">
+                    <div class = "card-user">
+                        <img class = "avatar" src = "https://i.pravatar.cc/100?img=5" alt = "Profile picture of Chelsea">
+                        <span class = "username">chelsea</span>
+                    </div>
+                    <button class = "icon_btn" type = "button" aria-label="More options">
+                        <i class = "fa-solid fa-ellipsis"></i>
+                    </button>
+                </div>
+                <img class = "post-img" src = "https://picsum.photos/seed/hw02a/900/650" alt = "Post image">
+                <div class = "post-body">
+                    <div class = "actions">
+                        <div class = "actions-left">
+                            <button class ="icon_btn" type = "button" aria-label = "Like">
+                                <i class = "fa-regular fa-heart"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Comment">
+                                <i class = "fa-regular fa-comment"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Share">
+                                <i class = "fa-regular fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <button class = "icon_btn" type = "button" aria-label = "Bookmark">
+                            <i class = "fa-regular fa-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <div class = "likes"><strong>1,284 likes</strong></div>
+                    <div class = "caption">
+                        <span class = "username">chelsea</span>
+                        <span>Sunny day, good vibes, and a quick coffe stop.</span>
+                        <a class = "more" href="#">more</a>
+                    </div>
+
+                    <div class = "comments">
+                        <div class = "comment"><span class = "username">alex</span>That looks unreal</div>
+                        <div class = "comment"><span class = "username">chelsea</span>Love the colors in this!</div>
+                    </div>
+
+                    <div class = "add-comment">
+                        <i class = "fa-regular fa-face-smile" aria-hidden = "true"></i>
+                        <input type = "text" placeholder = "Add a comment..." aria-label = "Add a comment">
+                        <a class = "post-link" href="#">Post</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="post">
+                <div class = "card-header">
+                    <div class = "card-user">
+                        <img class = "avatar" src = "https://i.pravatar.cc/100?img=18" alt = "Profile picture of Jordan">
+                        <span class = "username">jordan</span>
+                    </div>
+                    <button class = "icon_btn" type = "button" aria-label="More options">
+                        <i class = "fa-solid fa-ellipsis"></i>
+                    </button>
+                </div>
+                <img class = "post-img" src = "https://picsum.photos/seed/hw02b/900/650" alt = "Post image">
+                <div class = "post-body">
+                    <div class = "actions">
+                        <div class = "actions-left">
+                            <button class ="icon_btn" type = "button" aria-label = "Like">
+                                <i class = "fa-regular fa-heart"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Comment">
+                                <i class = "fa-regular fa-comment"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Share">
+                                <i class = "fa-regular fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <button class = "icon_btn" type = "button" aria-label = "Bookmark">
+                            <i class = "fa-regular fa-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <div class = "likes"><strong>922 likes</strong></div>
+                    <div class = "caption">
+                        <span class = "username">jordan</span>
+                        <span>Weekend hike with the crew.</span>
+                        <a class = "more" href="#">more</a>
+                    </div>
+
+                    <div class = "comments">
+                        <div class = "comment"><span class = "username">maya</span>Need that trail name</div>
+                        <div class = "comment"><span class = "username">ben</span>Solid shot!</div>
+                    </div>
+
+                    <div class = "add-comment">
+                        <i class = "fa-regular fa-face-smile" aria-hidden = "true"></i>
+                        <input type = "text" placeholder = "Add a comment..." aria-label = "Add a comment">
+                        <a class = "post-link" href="#">Post</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="post">
+                <div class = "card-header">
+                    <div class = "card-user">
+                        <img class = "avatar" src = "https://i.pravatar.cc/100?img=33" alt = "Profile picture of Maya">
+                        <span class = "username">maya</span>
+                    </div>
+                    <button class = "icon_btn" type = "button" aria-label="More options">
+                        <i class = "fa-solid fa-ellipsis"></i>
+                    </button>
+                </div>
+                <img class = "post-img" src = "https://picsum.photos/seed/hw02c/900/650" alt = "Post image">
+                <div class = "post-body">
+                    <div class = "actions">
+                        <div class = "actions-left">
+                            <button class ="icon_btn" type = "button" aria-label = "Like">
+                                <i class = "fa-regular fa-heart"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Comment">
+                                <i class = "fa-regular fa-comment"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Share">
+                                <i class = "fa-regular fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <button class = "icon_btn" type = "button" aria-label = "Bookmark">
+                            <i class = "fa-regular fa-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <div class = "likes"><strong>2,031 likes</strong></div>
+                    <div class = "caption">
+                        <span class = "username">maya</span>
+                        <span>Quick city walk before class.</span>
+                        <a class = "more" href="#">more</a>
+                    </div>
+
+                    <div class = "comments">
+                        <div class = "comment"><span class = "username">alex</span>This is clean</div>
+                        <div class = "comment"><span class = "username">chelsea</span>Where is this?</div>
+                    </div>
+
+                    <div class = "add-comment">
+                        <i class = "fa-regular fa-face-smile" aria-hidden = "true"></i>
+                        <input type = "text" placeholder = "Add a comment..." aria-label = "Add a comment">
+                        <a class = "post-link" href="#">Post</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="post">
+                <div class = "card-header">
+                    <div class = "card-user">
+                        <img class = "avatar" src = "https://i.pravatar.cc/100?img=60" alt = "Profile picture of Ben">
+                        <span class = "username">ben</span>
+                    </div>
+                    <button class = "icon_btn" type = "button" aria-label="More options">
+                        <i class = "fa-solid fa-ellipsis"></i>
+                    </button>
+                </div>
+                <img class = "post-img" src = "https://picsum.photos/seed/hw02d/900/650" alt = "Post image">
+                <div class = "post-body">
+                    <div class = "actions">
+                        <div class = "actions-left">
+                            <button class ="icon_btn" type = "button" aria-label = "Like">
+                                <i class = "fa-regular fa-heart"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Comment">
+                                <i class = "fa-regular fa-comment"></i>
+                            </button>
+                            <button class ="icon_btn" type = "button" aria-label = "Share">
+                                <i class = "fa-regular fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <button class = "icon_btn" type = "button" aria-label = "Bookmark">
+                            <i class = "fa-regular fa-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <div class = "likes"><strong>640 likes</strong></div>
+                    <div class = "caption">
+                        <span class = "username">ben</span>
+                        <span>Late night study break.</span>
+                        <a class = "more" href="#">more</a>
+                    </div>
+
+                    <div class = "comments">
+                        <div class = "comment"><span class = "username">sofia</span>Same energy</div>
+                        <div class = "comment"><span class = "username">jordan</span>We got this!</div>
+                    </div>
+
+                    <div class = "add-comment">
+                        <i class = "fa-regular fa-face-smile" aria-hidden = "true"></i>
+                        <input type = "text" placeholder = "Add a comment..." aria-label = "Add a comment">
+                        <a class = "post-link" href="#">Post</a>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
