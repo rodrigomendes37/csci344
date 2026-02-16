@@ -35,5 +35,16 @@ main,
 
 /* End Debugging Code */
 
+.top-nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color:  hotpink;
+}
+
+.post{
+    min-height: 300px;
+}
+
 
 @media (max-width: 800px) {}

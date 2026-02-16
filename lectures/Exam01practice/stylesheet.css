@@ -1,0 +1,56 @@
+body{
+    background-color: #0e172a;
+    color: white;
+}
+
+
+/*dot nottation for class level rules
+    1. put this container into grid mode (display: grid)
+    2. define the columns (gird-template-columns: col1, col2, ...)
+    3. create some gap in between the columns and rows (gap: 28px)
+*/
+.grid_layout{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.b{
+    border: solid 1px grey;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* teach header to stretch all 3 columns*/
+header, footer{
+    grid-column: 1/4;
+}
+
+main{
+    min-height: 250px;
+}
+
+nav, main, aside{
+    text-align: center;
+}
+
+/* when you are making rules for mobile you need a 
+"media query"*/
+@media screen and (max-width: 600px){
+    .grid_layout{
+        grid-template-columns: 1fr;
+    }
+
+    header, footer{
+    grid-column: 1/2;
+    }
+
+    nav, main, aside{
+    text-align: left;
+    }
+
+    aside{
+        min-height: 80px;
+    }
+
+}
