@@ -1,0 +1,12 @@
+main {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card img {
+  display: block;
+  margin-bottom: 10px;
+}
