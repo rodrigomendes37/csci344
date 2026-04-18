@@ -1,5 +1,7 @@
 import React from "react";
 import BookmarkButton from "./BookmarkButton.jsx";
+import LikeButton from "./LikeButton.jsx";
+import AddComment from "./AddComment.jsx";
 
 export default function Post( {post, token, refreshPosts} ){
 
@@ -22,15 +24,19 @@ export default function Post( {post, token, refreshPosts} ){
             <div className="p-4">
                 <div className="flex justify-between text-2xl mb-3">
                     <div>
-                        <button><i className="fas fa-heart "></i></button>
+                        <LikeButton
+                            token = {token}
+                            post = {post}
+                            refreshPosts = {refreshPosts}
+                        />
                         <button><i className="far fa-comment"></i></button>
                         <button><i className="far fa-paper-plane"></i></button>
                     </div>
                     <div>
                         <BookmarkButton 
-                        token = {token} 
-                        post = {post} 
-                        refreshPosts={refreshPosts} 
+                            token = {token} 
+                            post = {post} 
+                            refreshPosts={refreshPosts} 
                         />
                     </div>
                 </div>
@@ -42,7 +48,7 @@ export default function Post( {post, token, refreshPosts} ){
                         <strong>{post.user.username}</strong> {post.caption}
                     </p>
                 </div>
-                {post.comments && post.comments.slice(0, 2).map((comment) => (
+                {post.comments && post.comments.slice(-2).map((comment) => (
                     <p key = {comment.id} className = "text-sm mb-3">
                         <strong>{comment.user.username}</strong> {comment.text}
                     </p>
@@ -51,17 +57,11 @@ export default function Post( {post, token, refreshPosts} ){
                     {post.display_time}
                 </p>
             </div>
-            <div className="flex justify-between items-center p-3">
-                <div className="flex items-center gap-3 min-w-[80%]">
-                    <i className="far fa-smile text-lg"></i>
-                    <input 
-                        type="text" 
-                        className="min-w-[80%] focus:outline-none" 
-                        placeholder="Add a comment..." 
-                    />
-                </div>
-                <button className="text-blue-500 py-2">Post</button>
-            </div>
+            <AddComment
+                token = {token}
+                post = {post}
+                refreshPosts = {refreshPosts}
+            />
         </section>
     );
 }
