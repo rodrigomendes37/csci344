@@ -1,0 +1,54 @@
+Phase 2 :
+Q1 - Three tables that correspond to the resource types that are defined in api.config.yaml are: 
+    Sneaker, Brand, and Favourite.
+    One of the tables that exists but its not defined in api.config.yaml is: users. 
+
+Q2 - In table Sneaker, the column that looks like it is referencing another table (foreign key) is brand, and owner_id. 
+
+Q3 - The required fields are marked as "required:true" in api.config.yaml and correspond to fields that can't be empty
+    in the database, while the optional ones do not have the required property and can be empty. 
+
+Part 3: 
+Q4 - npm run seed loads data from CSV files into the database in "bulk", while the REST API or data grid only allows
+    to modify individual records directly while its running. 
+
+Q5 - We shoudl run npm generate first becasue it rebuilds the database schema and updates the 
+    CVS templates to match the changes in api.config.yaml before inserting the data with npm run seed. 
+
+Part 4: 
+Q6 - When I applied the filters, the request URL stayed the same path but added query parameters after 
+    the "?" to show the filter values, for example : " — /api/sneakers?brand=6".
+
+Q7 - /api/sneakers?name=running
+
+Part 5:
+Q8 - One difference is that /api/docs lets me test the REST API directly, including authenticated requests, 
+    while the data grid gives me a simpler spreadsheet interface to view and edit the data.
+
+Part 6:
+Q9 - One advantage of introducing a separate PlantType resource is that it keeps plant types consistent and 
+    avoids duplicate species names, since each plant references a shared type instead of storing species in
+    plain text.
+
+Part 7:
+Q10 - 
+    1: 
+        Path: /api/items  
+        Resource: Item  
+        Fields: name, description, price, created_at  
+        Queryable fields: name, price  
+        Relationship: Items could be linked to a Category resource 
+
+    2: 
+        Path: /api/categories  
+        Resource: Category  
+        Fields: name, description  
+        Queryable fields: name  
+        Relationship: Categories could be linked to Items 
+
+    3: 
+        Path: /api/users  
+        Resource: User  
+        Fields: username, email, created_at  
+        Queryable fields: username  
+        Relationship: Users could be linked to Items or other resources as owners
